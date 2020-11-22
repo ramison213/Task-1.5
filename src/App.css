@@ -1,0 +1,10 @@
+.wrap {
+  display: inline-block;
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card {
+  box-shadow: -1px 3px 15px -1px rgba(0,0,0,0.36);
+}
