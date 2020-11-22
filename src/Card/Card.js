@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Card = props => (
-  <div className="card">
-    <img className="card-img-top" src={ props.imgUrl } alt="Product image" />
-    <div className="card-body">
-      <h5 className="card-title">{ props.title }</h5>
-      <p className="card-text">{ props.desc }</p>
-      <p className="card-text">Цена: { props.price } $</p>
-      <a href="" className="btn btn-primary">Купить</a>
-    </div>
-  </div>
-)
-
-export default Card
+export default class Card extends Component {
+  render(props) {
+    return (
+      <div className="card">
+        <img className="card-img-top" src={ this.props.imgUrl } alt="Card image" />
+        <div className="card-body">
+          <h5 className="card-title">{ this.props.title }</h5>
+          <p className="card-text">{ this.props.desc }</p>
+          <p className="card-text">Цена: { this.props.price } грн</p>
+          <button type="button" className="btn btn-primary">Купить</button>
+        </div>
+      </div>
+    )
+  }
+}
